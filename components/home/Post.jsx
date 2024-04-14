@@ -10,7 +10,7 @@ const Post = ({post}) => {
       <Divider width={1} />
       <PostHeader post={post} />
       <PostImage post={post} />
-      <View style={{marginHorizontal: 15, marginTop: 10}}>
+      <View style={{marginHorizontal: 15, marginTop: 10, margin: 10}}>
         <PostFooter />
 
         <Like post={post} />
