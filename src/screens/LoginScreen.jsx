@@ -3,14 +3,14 @@ import React from 'react';
 import {Image} from 'react-native-elements';
 import LoginForm from '../../components/home/loginScreen/LoginForm';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoConatiner}>
         <Image source={require('../../assets/instagram_logo_new.png')} style={{width: 80, height: 80 }} />
       
       </View>
-    <LoginForm />
+    <LoginForm  navigation={navigation} />
     </SafeAreaView>
 
   );

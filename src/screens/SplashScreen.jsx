@@ -1,7 +1,32 @@
 import {View, Text, SafeAreaView, StyleSheet, Image} from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+
+const isSigned = false;
+
+// es lo primerop que se ejecutra cuando el componente se crea
+// y simulara la carga de informacion 
+// useEffect(() => {
+//   navigation.push("LoginScreen")
+//  })
+
+//simulacion de carga de data
+ useEffect(() => {
+  const timer = setTimeout(() => {
+    navigation.push("LoginScreen")
+   
+     if(isSigned) {
+      navigation.push("HomeScreen")
+     } else {
+      navigation.push("LoginScreen")
+     }
+
+
+  }, 2000)
+  return() => clearTimeout(timer)
+ },[navigation])
+
   return (
     <SafeAreaView style={styles.container}>
       <View></View>
@@ -26,6 +51,13 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
+  metaLogo: {
+    width: 100,
+    height: 80,
+    resizeMode: 'contain',
+    margin: 0
+}
+
 });
 
 export default SplashScreen;

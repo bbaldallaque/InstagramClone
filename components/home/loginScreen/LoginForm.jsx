@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import {Formik} from 'formik';
 
-const LoginForm = () => {
+const LoginForm = ({navigation}) => {
   const LoginFormScheme = Yup.object().shape({
     email: Yup.string().required('Email is required'),
     password: Yup.string()
@@ -18,14 +18,25 @@ const LoginForm = () => {
       .min(6, 'Your password has to have at least 6 charactere'),
   });
 
-  const onLogin = async (email, password) => {};
+  const onLogin = async (email, password) => {
+    try {
+      // const result = serverApi.login(email, password);
+      // if (result) {
+      //   navigation.push('HomeScreen');
+      // }
+
+      navigation.push('HomeScreen');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <View style={styles.wrapper}>
       <Formik
         initialValues={{email: '', password: ''}}
         onSubmit={values => {
-          onLogin();
+          onLogin(values.email, values.password);
         }}
         ty
         validationSchema={LoginFormScheme}
@@ -81,7 +92,10 @@ const LoginForm = () => {
                 <Text style={styles.textColor}>Forgot password</Text>
               </TouchableOpacity>
             </View>
-            <Pressable style={styles.button(isValid)}>
+            <Pressable style={styles.button(isValid)}
+             onPress={handleSubmit}
+             disabled={isValid}
+             >
               <Text style={styles.textColor}>Log in</Text>
             </Pressable>
             <View style={styles.signupContainer}>
