@@ -94,7 +94,7 @@ const LoginForm = ({navigation}) => {
             </View>
             <Pressable style={styles.button(isValid)}
              onPress={handleSubmit}
-             disabled={isValid}
+             disabled={!isValid}
              >
               <Text style={styles.textColor}>Log in</Text>
             </Pressable>
