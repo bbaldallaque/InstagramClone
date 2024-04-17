@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.20",
+    "@react-navigation/stack": "^6.3.29",
     "@rnlab/react-native-elements": "^1.1.0",
     "formik": "^2.4.5",
     "formix": "^0.0.1",
@@ -19,6 +20,7 @@
     "react-native": "0.73.5",
     "react-native-elements": "^3.4.3",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-webview": "^13.8.6",
     "yup": "^1.4.0"
   },
   "devDependencies": {
