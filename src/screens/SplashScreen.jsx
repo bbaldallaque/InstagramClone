@@ -14,7 +14,7 @@ const isSigned = false;
 //simulacion de carga de data
  useEffect(() => {
   const timer = setTimeout(() => {
-    navigation.push("LoginScreen")
+    // navigation.push("LoginScreen")
    
      if(isSigned) {
       navigation.push("HomeScreen")

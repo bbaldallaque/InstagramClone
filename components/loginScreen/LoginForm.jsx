@@ -99,10 +99,12 @@ const LoginForm = ({navigation}) => {
               <Text style={styles.textColor}>Log in</Text>
             </Pressable>
             <View style={styles.signupContainer}>
-              <Text style={styles.textColor}>Don't have an account? </Text>
-              <TouchableOpacity onPress={() => navigation.push('SignUpScreen')}>
-                <Text style={styles.textColor}> </Text>
+
+
+            <TouchableOpacity onPress={() => navigation.push('SignUpScreen')}>
+                <Text style={styles.textColor}> Don't have an account?  Sign Up</Text>
               </TouchableOpacity>
+
             </View>
           </>
         )}
