@@ -1,6 +1,7 @@
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
+
 const HeaderProfile = () => {
   return (
     <View style={styles.container}>
@@ -11,15 +12,17 @@ const HeaderProfile = () => {
         <TouchableOpacity>
           <Image style={styles.icon} source={require('../../assets/plus_icon.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity>
-       
+        <TouchableOpacity>     
           <Image
             style={styles.icon} source={require('../../assets/list_icon.png')}/>
         </TouchableOpacity>
-      </View>
+      </View>     
     </View>
   );
 };
+
+
+
 
 //Alinear los componentes de una misma linea, hijos en diferentes padres
 const styles = StyleSheet.create({
